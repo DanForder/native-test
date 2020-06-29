@@ -5,7 +5,7 @@ import Screen from "../components/Screen/Screen";
 import ListItem from "../components/ListItem";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
-import ListItemSeperator from "../components/ListItemSeperator";
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const menuItems = [
   {
@@ -38,7 +38,7 @@ function AccountScreen(props) {
         <FlatList
           data={menuItems}
           keyExtractor={(menuItem) => menuItem.title}
-          ItemSeparatorComponent={ListItemSeperator}
+          ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) => (
             <ListItem
               title={item.title}
