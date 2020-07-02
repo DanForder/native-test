@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
-import ListItem from "../components/ListItem";
-import Screen from "../components/Screen/Screen";
-import ListItemSeparator from "../components/ListItemSeparator";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import ListItem from "../components/lists/ListItem";
+import Screen from "../components/Screen";
+import ListItemSeparator from "../components/lists/ListItemSeparator";
+import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
 
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum varius nisi ac, faucibus rutrum massa. Suspendisse finibus fermentum velit nec facilisis. Nulla a eros eget lacus volutpat feugiat eget id sapien. Pellentesque porta sollicitudin elementum. Curabitur ullamcorper sem nulla, sed ornare mi tristique nec. Maecenas nec varius mi. Maecenas dolor magna, tempus vitae diam ac, aliquam commodo ante. Vestibulum fermentum mattis justo vel semper. Nulla blandit mi ut tortor vulputate consectetur. Etiam consectetur congue lacus, sed tristique tellus rutrum at.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum varius nisi ac, faucibus rutrum massa. Suspendisse finibus fermentum velit nec facilisis. Nulla a eros eget lacus volutpat feugiat eget id sapien. Pellentesque porta sollicitudin elementum. Curabitur ullamcorper sem nulla, sed ornare mi tristique nec. Maecenas nec varius mi. Maecenas dolor magna, tempus vitae diam ac, aliquam commodo ante. Vestibulum fermentum mattis justo vel semper. Nulla blandit mi ut tortor vulputate consectetur. Etiam consectetur congue lacus, sed tristique tellus rutrum at.",
     image: require("../assets/dan.jpg"),
   },
   {
