@@ -22,7 +22,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "Forms & validation with Formik & Yup",
+    "description": "React Native Fundamentals complete!",
     "githubUrl": "https://github.com/DanForder/native-test"
   }
 }
