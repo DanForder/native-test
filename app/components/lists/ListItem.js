@@ -1,9 +1,10 @@
 import React from "react";
-import { Image, StyleSheet, View, TouchableHighlight } from "react-native";
-import colors from "../../config/colors";
-import AppText from "../AppText";
-import Swipeable from "react-native-gesture-handler/Swipeable";
+import { View, StyleSheet, Image, TouchableHighlight } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Swipeable from "react-native-gesture-handler/Swipeable";
+
+import Text from "../Text";
+import colors from "../../config/colors";
 
 function ListItem({
   title,
@@ -11,34 +12,29 @@ function ListItem({
   image,
   IconComponent,
   onPress,
-  showChevrons = true,
   renderRightActions,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
-      <TouchableHighlight onPress={onPress} underlayColor={colors.light}>
+      <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.container}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
-            {title && (
-              <AppText style={styles.title} numberOfLines={1}>
-                {title}
-              </AppText>
-            )}
+            <Text style={styles.title} numberOfLines={1}>
+              {title}
+            </Text>
             {subTitle && (
-              <AppText style={styles.subTitle} numberOfLines={2}>
+              <Text style={styles.subTitle} numberOfLines={2}>
                 {subTitle}
-              </AppText>
+              </Text>
             )}
           </View>
-          {showChevrons && (
-            <MaterialCommunityIcons
-              color={colors.medium}
-              name="chevron-right"
-              size={25}
-            />
-          )}
+          <MaterialCommunityIcons
+            color={colors.medium}
+            name="chevron-right"
+            size={25}
+          />
         </View>
       </TouchableHighlight>
     </Swipeable>
@@ -60,7 +56,7 @@ const styles = StyleSheet.create({
   image: {
     width: 70,
     height: 70,
-    borderRadius: 50,
+    borderRadius: 35,
   },
   subTitle: {
     color: colors.medium,

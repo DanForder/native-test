@@ -1,22 +1,30 @@
-const { RefreshControlBase } = require("react-native");
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import AppButton from "../components/AppButton/AppButton";
+import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
-function WelcomeScreen(props) {
+import Button from "../components/Button";
+import routes from "../navigation/routes";
+
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
-      blurRadius={8}
-      source={require("../assets/background.jpg")}
+      blurRadius={10}
       style={styles.background}
+      source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image source={require("../assets/logo-red.png")} style={styles.logo} />
+        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" color="primary" />
-        <AppButton title="Register" color="secondary" />
+        <Button
+          title="Login"
+          onPress={() => navigation.navigate(routes.LOGIN)}
+        />
+        <Button
+          title="Register"
+          color="secondary"
+          onPress={() => navigation.navigate(routes.REGISTER)}
+        />
       </View>
     </ImageBackground>
   );
@@ -47,4 +55,5 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 });
+
 export default WelcomeScreen;
