@@ -22,7 +22,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "React Native Fundamentals complete!",
+    "description": "Up to navigation now!",
     "githubUrl": "https://github.com/DanForder/native-test"
   }
 }
